@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.nio.file.Files;
+
 public class MainActivity extends AppCompatActivity {
     EditText editTextinicial, editTextfinal;
     TextView textViewResultado;
@@ -16,16 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextinicial = findViewById(R.id.editTextinicial);
-        editTextfinal = findViewById(R.id.editTextfinal);
-        textViewResultado = findViewById(R.id.textViewResultado);
-    }
 
     public void sorteia(View view) {
-       int inicial = Integer.parseInt(editTextinicial.getText().toString());
-       int fim = Integer.parseInt(editTextfinal.getText().toString());
+  //     Button button = (Button) view;
+//       button.setTect("oi");
+      TextView textView = findViewById(R.id.textView);
+      EditText editTextInicial = findViewById(R.id.aditTextinicial);
+      EditTextFinal = findViewById(R.id.editTextfinal);
 
-       textViewResultado.setText(Integer.toString((inicial)));
+      int valorInicial = Integer.parseInt(editTextInicial.getText().toString());
+      int valorFinal = integer.parseInt(editTextfinal.getText().toString());
 
+      textView.setText(Integer.toString(numeroSorteado));
     }
 }
